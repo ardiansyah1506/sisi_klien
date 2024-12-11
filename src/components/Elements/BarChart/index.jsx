@@ -6,7 +6,7 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const chartSetting = {
    
-    width: 700,
+    width: 600,
     height: 300,
     
 };
