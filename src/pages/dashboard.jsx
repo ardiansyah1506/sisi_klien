@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import Card from "../components/Elements/Card";
+import CardBalance from "../components/Fragments/Dashboard/CardBalance";
 import CardBill from "../components/Fragments/Dashboard/CardBill";
 import CardExpenseBreakdown from "../components/Fragments/Dashboard/CardExpenseBreakdown";
+import CardGoal from "../components/Fragments/Dashboard/CardGoal";
+import CardStatistic from "../components/Fragments/Dashboard/CardStatistic";
 import CardTransaction from "../components/Fragments/Dashboard/CardTransaction";
 import MainLayout from "../components/Layouts/MainLayout";
 
@@ -12,11 +15,11 @@ const DashboardPage = () => {
     <MainLayout type="dashboard">
       {/* top content start*/}
       <div className="md:grid md:grid-cols-3 md:gap-x-6">
-        <Card title="Total Balance" />
-        <Card title="Goals" />
+        <CardBalance/>
+        <CardGoal />
         <CardBill/>
         <CardTransaction />
-        <Card variant="md:col-span-2" title="Statistics" />
+        <CardStatistic/>
         <CardExpenseBreakdown />
       </div>
       {/* bottom content end*/}

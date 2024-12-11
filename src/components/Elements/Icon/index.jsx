@@ -1,4 +1,8 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react-refresh/only-export-components */
+
+import { KeyboardArrowRight } from "@mui/icons-material";
+
 /* eslint-disable react/prop-types */
 const IconWrapper = ({ children }) => (
   <svg
@@ -239,6 +243,36 @@ const KebabMenuIcon = () => (
   </IconWrapper>
 );
 
+const ArrowUpRight = () => (
+  <IconWrapper>
+  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg>
+  </IconWrapper>
+);
+
+const ArrowDown = () => (
+  <IconWrapper>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+      <path d="M12 16l-6-6h12z" />
+    </svg>
+  </IconWrapper>
+);
+
+const ArrowUp = () => (
+  <IconWrapper>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+      <path d="M12 8l6 6H6z" />
+    </svg>
+  </IconWrapper>
+);
+
+const ArrowRight = () => (
+  <IconWrapper>
+  <KeyboardArrowRight />
+  </IconWrapper>
+);
+
 export const Icon = {
   Overview: OverviewIcon,
   Balance: BalanceIcon,
@@ -249,4 +283,8 @@ export const Icon = {
   Setting: SettingIcon,
   Logout: LogoutIcon,
   KebabMenu: KebabMenuIcon,
+  ArrowUpRight: ArrowUpRight,
+  ArrowRight: ArrowRight,
+  ArrowDown: ArrowDown,
+  ArrowUp: ArrowUp,
 };

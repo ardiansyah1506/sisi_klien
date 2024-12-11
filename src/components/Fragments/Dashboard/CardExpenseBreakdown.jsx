@@ -1,6 +1,6 @@
 import expensesBreakdowns from "../../../data/expense";
 import Card from "../../Elements/Card";
-// import { Icon } from "../../Elements/Icon";
+import { Icon } from "../../Elements/Icon";
 
 const CardExpenseBreakdown = () => {
     const expenseCard = expensesBreakdowns.map((expensesBreakdown) => (
@@ -21,9 +21,9 @@ const CardExpenseBreakdown = () => {
               </div>
             </div>
           </div>
-          {/* <div className="flex place-content-center flex-col me-8">
+          <div className="flex place-content-center flex-col me-8">
             <Icon.ArrowRight />
-          </div> */}
+          </div>
         </div>
       ));
 
