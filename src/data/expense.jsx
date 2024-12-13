@@ -1,10 +1,10 @@
 import { Icon } from "../components/Elements/Icon";
-import HouseIcon from '@mui/icons-material/House';
-import FoodBankIcon from '@mui/icons-material/FoodBank';
-import AttractionsIcon from '@mui/icons-material/Attractions';
-import EmojiTransportationIcon from '@mui/icons-material/EmojiTransportation';
-import FolderIcon from '@mui/icons-material/Folder';
-import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import HouseIcon from "@mui/icons-material/House";
+import FoodBankIcon from "@mui/icons-material/FoodBank";
+import AttractionsIcon from "@mui/icons-material/Attractions";
+import EmojiTransportationIcon from "@mui/icons-material/EmojiTransportation";
+import FolderIcon from "@mui/icons-material/Folder";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 // expenses.js
 const expensesBreakdowns = [
@@ -21,7 +21,7 @@ const expensesBreakdowns = [
     category: "Food",
     amount: 350,
     percentage: 8,
-    icon: <FoodBankIcon/>,
+    icon: <FoodBankIcon />,
     arrow: <Icon.ArrowUp />,
   },
   {
@@ -37,7 +37,7 @@ const expensesBreakdowns = [
     category: "Entertainment",
     amount: 80,
     percentage: 15,
-    icon: <AttractionsIcon/>,
+    icon: <AttractionsIcon />,
     arrow: <Icon.ArrowUp />,
   },
   {
@@ -45,7 +45,7 @@ const expensesBreakdowns = [
     category: "Shopping",
     amount: 420,
     percentage: 25,
-    icon: <ShoppingCartRoundedIcon/>,
+    icon: <ShoppingCartRoundedIcon />,
     arrow: <Icon.ArrowDown />,
   },
   {
@@ -110,5 +110,5 @@ export const expensesStatistics = {
       amountThisWeek: 50000,
       amountLastWeek: 10000,
     },
-  ]
+  ],
 };
