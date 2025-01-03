@@ -22,6 +22,33 @@ const Navbar = () => {
   const {setIsLoggedIn, setName, name} = useContext(AuthContext);
   const {setMsg, setOpen, setIsLoading} = useContext(NotifContext);
 
+  const Logout = async () => {
+    setIsLoading(true);
+    try {
+      await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
+        headers: {
+          Authorization: `Bearer ${refreshToken}`,
+        },
+      });
+      setOpen(true);
+      setMsg({severity: "success", desc: "Logout Success"});   
+    } catch (error) {
+      setIsLoading(false);
+      
+      if(error.response){
+        setOpen(true);
+        setMsg({severity: "error", desc: error.response.data.msg});
+      }
+    }
+    setIsLoggedIn(false);
+    setName("");
+    setIsLoading(false);
+    
+    localStorage.removeItem("refreshToken");
+    navigate("/login");
+  };
+  
+
   const navigate = useNavigate();
   const menus = [
     {
@@ -71,31 +98,7 @@ const Navbar = () => {
 
   const refreshToken = localStorage.getItem("refreshToken");
 
-  const Logout = async () => {
-    setIsLoading(true);
-    try {
-      await axios.get("https://jwt-auth-eight-neon.vercel.app/logout", {
-        headers: {
-          Authorization: `Bearer ${refreshToken}`,
-        },
-      });
-      setOpen(true);
-      setMsg({severity: "success", desc: "Logout Success"});   
-    } catch (error) {
-      setIsLoading(false);
-      
-      if(error.response){
-        setOpen(true);
-        setMsg({severity: "error", desc: error.response.data.msg});
-      }
-    }
-    setIsLoggedIn(false);
-    setName("");
-    setIsLoading(false);
-    
-    localStorage.removeItem("refreshToken");
-    navigate("/login");
-  };
+ 
   
   return (
     <div className={`bg-defaultBlack ${theme.name}`}>
