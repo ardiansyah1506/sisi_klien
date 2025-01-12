@@ -14,7 +14,7 @@ const DashboardPage = () => {
   return (
     <MainLayout type="dashboard">
       {/* top content start*/}
-      <div className="md:grid md:grid-cols-3 md:gap-x-6">
+      <div className="md:grid md:grid-cols-3 grid-cols-1 md:gap-x-6">
         <CardBalance/>
         <CardGoal />
         <CardBill/>
